@@ -1,0 +1,233 @@
+html,
+body {
+  height: 80vh;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/pulau-hatta.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover  /*100% 80%*/;
+  display: flex;
+  flex-direction: column;
+}
+
+/*Navbar logo*/
+
+.navbar {
+  color: white;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navbar logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo {
+  width: 60px;
+  border-radius: 45px;
+  margin: 10px;
+}
+
+.logo-text {
+  font-weight: bold;
+  font-size: 28px;
+  color: white;
+}
+
+@media only screen and (min-width: 769px) {
+  .logo {
+    margin-left: 5rem;
+  }
+}
+
+/* Nav Menu */
+.nav-menu {
+  margin-right: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 1.5rem;
+  /*background-color: rgba(255, 255, 255, 0.192);*/
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+  background-color: #cc7b00;
+}
+
+.nav-link {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 450;
+  transition: color 0.3s ease-in-out;
+  padding: 10px 15px;
+}
+
+.nav-link:hover {
+  color: rgb(255, 255, 255);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  border-radius: 10px;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+
+/* Close Nav Menu */
+
+/*Responsive Halaman Awal Header*/
+@media only screen and (max-width: 768px) {
+  html {
+    background-size: cover;
+    height: auto;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: 100%;
+    top: 6rem;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.093);
+    backdrop-filter: blur(10px);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #cc7a00b9;
+    color: white;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .navigation-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navigation-bar li {
+    display: none;
+  }
+
+  .toggle-checkbox:checked + .navigation-bar li {
+    display: flex;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin: 5px;
+    padding: 8px;
+  }
+}
+
+/* Content pada Halaman Awal */
+.home {
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  margin: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .home {
+    margin-top: 50px;
+  }
+}
+
+#heading {
+  font-size: 2em;
+  margin: auto;
+}
+
+.heading-paragraf {
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 20px;
+}
+
+/* Button */
+.button {
+  text-align: center;
+  margin: 20px;
+}
+
+#btn-content {
+  background-color: #ee951a;
+  color: whitesmoke;
+  padding: 20px 30px;
+  margin: 20px auto;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+}
+
+#btn-content:hover {
+  background-color: #cc7b00;
+}
+/* Close content Halaman Awal */
